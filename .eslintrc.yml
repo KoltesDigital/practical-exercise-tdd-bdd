@@ -1,0 +1,52 @@
+env:
+  es2020: true
+  node: true
+extends:
+  - eslint:recommended
+  - prettier
+  - plugin:chai-friendly/recommended
+  - plugin:import/errors
+  - plugin:import/warnings
+overrides:
+  - files: "**/*.ts"
+    extends:
+      - plugin:@typescript-eslint/eslint-recommended
+      - plugin:@typescript-eslint/recommended
+      - plugin:@typescript-eslint/recommended-requiring-type-checking
+      - plugin:import/typescript
+    parser: "@typescript-eslint/parser"
+    parserOptions:
+      project: tsconfig.json
+      sourceType: module
+    rules:
+      "@typescript-eslint/explicit-module-boundary-types": off
+      "@typescript-eslint/no-var-requires": off
+      "@typescript-eslint/require-await": off
+  - files: "features/**/*.ts"
+    parserOptions:
+      project: tsconfig.features.json
+  - files: "src/**/*.spec.ts"
+    env:
+      mocha: true
+    extends:
+      - plugin:mocha/recommended
+    parserOptions:
+      project: tsconfig.spec.json
+    rules:
+      mocha/no-exclusive-tests: error
+      mocha/no-exports: off
+      mocha/no-hooks-for-single-case: off
+      mocha/no-setup-in-describe: off
+      mocha/no-sibling-hooks: off
+      mocha/no-skipped-tests: error
+      mocha/no-top-level-hooks: off
+plugins:
+  - sort-keys-fix
+rules:
+  import/no-extraneous-dependencies: error
+  import/order:
+    - error
+    - alphabetize:
+        order: asc
+  object-shorthand: error
+  sort-keys-fix/sort-keys-fix: error

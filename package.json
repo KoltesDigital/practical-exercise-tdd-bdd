@@ -1,0 +1,37 @@
+{
+  "name": "practical-exercise-tdd-bdd",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "format": "eslint . --ext .ts --fix && prettier --write . && sort-package-json \"package.json\"",
+    "test:features": "cucumber-js",
+    "test:lint": "eslint . --ext .ts && prettier --check .",
+    "test:unit": "mocha --config mocharc.js",
+    "test:unit:report": "mocha --config mocharc.js --report",
+    "test:unit:watch": "mocha --config mocharc.js --watch"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.3.1",
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.10.1",
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@typescript-eslint/parser": "^4.31.2",
+    "chai": "^4.3.4",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-node": "^0.3.6",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-mocha": "^9.0.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "mocha": "^9.1.2",
+    "mochawesome": "^6.2.2",
+    "prettier": "^2.4.1",
+    "sort-package-json": "^1.46.1",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  },
+  "packageManager": "yarn@3.0.2"
+}

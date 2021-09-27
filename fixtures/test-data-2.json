@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "id": "episode-1",
+      "name": "Episode 1",
+      "parentId": "project"
+    },
+    {
+      "id": "project",
+      "name": "Project"
+    },
+    {
+      "id": "sequence-1-2",
+      "name": "Sequence 1.2",
+      "parentId": "episode-1"
+    },
+    {
+      "id": "sequence-2-1",
+      "name": "Sequence 2.1",
+      "parentId": "episode-2"
+    },
+    {
+      "id": "episode-2",
+      "name": "Episode 2",
+      "parentId": "project"
+    },
+    {
+      "id": "sequence-1-1",
+      "name": "Sequence 1.1",
+      "parentId": "episode-1"
+    }
+  ],
+  "expectedPositions": [
+    {
+      "id": "project",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "episode-1",
+      "x": 1,
+      "y": 1
+    },
+    {
+      "id": "sequence-1-1",
+      "x": 2,
+      "y": 2
+    },
+    {
+      "id": "sequence-1-2",
+      "x": 2,
+      "y": 3
+    },
+    {
+      "id": "episode-2",
+      "x": 1,
+      "y": 4
+    },
+    {
+      "id": "sequence-2-1",
+      "x": 2,
+      "y": 5
+    }
+  ]
+}

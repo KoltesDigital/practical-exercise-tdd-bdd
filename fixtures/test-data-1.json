@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "id": "root",
+      "name": "Root"
+    },
+    {
+      "id": "child",
+      "name": "Child",
+      "parentId": "root"
+    }
+  ],
+  "expectedPositions": [
+    {
+      "id": "root",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "child",
+      "x": 1,
+      "y": 1
+    }
+  ]
+}
